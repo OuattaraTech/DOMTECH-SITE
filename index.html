@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMTECH - Ingénierie du froid, climatisation et énergie</title>
+    <meta name="description" content="DOMTECH spécialiste en installation, entretien et dépannage de climatisation, froid industriel et solutions énergétiques en Côte d'Ivoire">
+    <meta name="keywords" content="DOMTECH, climatisation Côte d'Ivoire, installation clim, entretien climatiseur, froid industriel, énergie, groupe électrogène, plomberie">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e6f4ff 50%, #d0ebff 100%);
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">DT</div>
+                    <h1 class="ml-3 text-xl font-bold text-gray-800">DOMTECH</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-blue-600 font-medium">Accueil</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition">Tarifs</a>
+                    <a href="#advice" class="text-gray-600 hover:text-blue-600 transition">Conseils</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu" class="text-gray-600"></i>
+                </button>
+                <a href="#contact" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition shadow-md">
+                    Demander un devis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">L'expertise du froid et de l'énergie</h1>
+                    <p class="text-xl text-gray-600 mb-8">DOMTECH vous propose des solutions innovantes en climatisation, réfrigération et énergie pour votre confort et performance énergétique.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition shadow-lg">
+                            Contactez-nous
+                        </a>
+                        <a href="#services" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-full font-medium transition">
+                            Nos services
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <!-- REMPLACER PAR VOTRE IMAGE HERO PRINCIPALE -->
+                    <img src="img/PROFILE RES.jpg" alt="Système de climatisation moderne" class="rounded-xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <!-- REMPLACER PAR VOTRE IMAGE DE PRESENTATION EQUIPE -->
+                    <img src="img/hero.jpg" alt="Technicien DOMTECH" class="rounded-xl shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Qui sommes-nous ?</h2>
+                    <p class="text-gray-600 mb-6">DOMTECH est une entreprise spécialisée dans l'ingénierie du froid, de la climatisation et de l'énergie. Notre équipe d'experts met à votre disposition son savoir-faire pour des solutions sur mesure.</p>
+                    <p class="text-gray-600 mb-8">Fondée par Amadou, DOMTECH s'engage à fournir des services de qualité avec un accompagnement personnalisé pour chaque client, qu'il s'agisse de particuliers ou de professionnels.</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-4 rounded-full mr-4">
+                            <i data-feather="phone" class="text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Contactez-nous</p>
+                            <p class="text-blue-600 font-medium">07 10 36 76 02 / 05 05 95 70 61</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-12 md:mb-0" data-aos="fade-right">
+                    <!-- REMPLACER PAR LA PHOTO DU FONDATEUR -->
+                    <img src="img/PROFILE RES 2.jpg" alt="Amadou, Fondateur de DOMTECH" class="rounded-full w-64 h-64 object-cover mx-auto shadow-xl">
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Fondateur</h2>
+                    <p class="text-gray-600 mb-6">Amadou Ouattara, techniciens spécialisé en thermique et énergétique et entrepreneur, a créé DOMTECH avec la vision d'apporter des solutions techniques innovantes dans le domaine du froid et de la climatisation en Côte d'Ivoire.</p>
+                    <p class="text-gray-600 mb-6">Avec plus de 5 ans d'expérience dans le secteur, il dirige aujourd'hui une équipe de techniciens qualifiés partageant la même exigence de qualité et de professionnalisme.</p>
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                        <i data-feather="quote" class="text-blue-600 w-8 h-8 mb-4"></i>
+                        <p class="text-gray-700 italic">"Notre mission est de vous apporter confort et performance énergétique grâce à des solutions techniques adaptées à vos besoins spécifiques."</p>
+                        <p class="text-blue-600 font-medium mt-4">- Amadou Ouattara, Fondateur de DOMTECH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Des solutions complètes pour tous vos besoins en climatisation, froid et énergie</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE CLIMATISATION -->
+                    <img src="img/climatisation slit.jpg" alt="Climatisation Split" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Climatisation Split</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Installation professionnelle</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Entretien et recharge gaz</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Désinstallation/réinstallation</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE ARMOIRES -->
+                    <img src="img/sm-devis-climatiseur-armoire.jpg" alt="Armoires climatisation" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Armoires de climatisation</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Installation pour entreprises</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Installation pour particuliers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Forfaits installation + entretien</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE REFRIGERATION -->
+                    <img src="img/bien-choisir-un-congelateur.webp" alt="Congélateurs et réfrigérateurs" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Congélateurs et réfrigérateurs</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Dépannage rapide et efficace</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Entretien préventif</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Vérification et contrôle</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE ELECTRICITE -->
+                    <img src="img/électricité.jpg" alt="Électricité bâtiment" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Électricité bâtiment</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Installation électrique</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Groupes électrogènes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Dépannage électrique</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE PLOMBERIE -->
+                    <img src="img/les-differents-travaux-de-plomberie.jpg" alt="Plomberie & gazinière" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Plomberie & gazinière</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Installation et réparation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Dépannage gazinière</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Maintenance préventive</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE CONSEILS -->
+                    <img src="img/conseiller énergétique .jpg" alt="Conseils énergétiques" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Conseils énergétiques</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Optimisation consommation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Solutions contre l'humidité</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Audit énergétique</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos Tarifs</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Des tarifs transparents et compétitifs pour tous nos services</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Climatisation Split -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md" data-aos="fade-up">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="wind" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Climatisation Split</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="border-b border-gray-200">
+                                <tr>
+                                    <th class="pb-3 text-gray-600 font-medium">Service</th>
+                                    <th class="pb-3 text-gray-600 font-medium text-right">Prix (FCFA)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Installation</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">20.000</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Entretien simple</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">10.000</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Entretien + gaz</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">15.000</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Installation + entretien</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">25.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 text-gray-600">Désinstallation + réinstallation</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">30.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Armoires climatisation -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="box" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Armoires climatisation</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="border-b border-gray-200">
+                                <tr>
+                                    <th class="pb-3 text-gray-600 font-medium">Service</th>
+                                    <th class="pb-3 text-gray-600 font-medium text-right">Prix (FCFA)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Installation entreprise</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">50.000</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Installation particulier</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">70.000</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Entretien + gaz</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">20.000</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Installation + entretien entreprise</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">65.000</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Installation + entretien particulier</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">55.000</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600">Entretien simple</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">15.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 text-gray-600">Désinstallation + réinstallation entreprise</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">85.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 text-gray-600">Désinstallation + réinstallation particulier</td>
+                                    <td class="py-3 text-gray-800 font-medium text-right">95.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 p-8 rounded-xl" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Congélateurs / Réfrigérateurs</h3>
+                        <p class="text-gray-600">Nos tarifs pour le dépannage, l'entretien et la vérification de vos appareils sont établis sur devis personnalisé après diagnostic.</p>
+                    </div>
+                    <div class="md:w-1/3 text-center md:text-right">
+                        <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition shadow-md">
+                            Demander un devis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advice Section -->
+    <section id="advice" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos Conseils</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Optimisez votre consommation et prolongez la durée de vie de vos équipements</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Conseil 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="battery-charging" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Réduire la consommation électrique</h3>
+                    <ul class="text-gray-600 space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Réglez votre climatiseur à 24-26°C pour un confort optimal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Entretenez régulièrement vos filtres à air</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Privilégiez les modèles Inverter plus économes</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Conseil 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="droplet" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Lutter contre l'humidité</h3>
+                    <ul class="text-gray-600 space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Assurez une bonne ventilation des pièces</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Utilisez des déshumidificateurs si nécessaire</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Vérifiez l'étanchéité de vos installations</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Conseil 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="shield" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Prolonger la durée de vie</h3>
+                    <ul class="text-gray-600 space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Programmez un entretien annuel de vos équipements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Nettoyez régulièrement les unités extérieures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
+                            <span>Évitez les surcharges électriques</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contactez-nous</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Une question ? Un projet ? Nous sommes à votre écoute</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
+                    <form action="https://formsubmit.co/infodomtech225@gmail.com" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Votre nom</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Votre email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Votre téléphone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"required>
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2">Service concerné</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                                <option value="">Sélectionnez un service</option>
+                                <option value="climatisation">Climatisation Split</option>
+                                <option value="armoires">Armoires climatisation</option>
+                                <option value="frigo">Congélateurs/Réfrigérateurs</option>
+                                <option value="electricite">Électricité bâtiment</option>
+                                <option value="plomberie">Plomberie & gazinière</option>
+                                <option value="conseils">Conseils énergétiques</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Votre message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg font-medium transition shadow-md"required>
+                            Envoyer la demande
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2 lg:pl-12" data-aos="fade-left">
+                    <div class="bg-gray-50 p-8 rounded-xl h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Coordonnées</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i data-feather="map-pin" class="text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Adresse</h4>
+                                    <p class="text-gray-600">Abidjan, Côte d'Ivoire</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i data-feather="phone" class="text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Téléphone</h4>
+                                    <p class="text-gray-600">07 10 36 76 02</p>
+                                    <p class="text-gray-600">05 05 95 70 61</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i data-feather="mail" class="text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">infodomtech225@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i data-feather="clock" class="text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800 mb-1">Horaires</h4>
+                                    <p class="text-gray-600">Lundi - Vendredi : 8h - 18h</p>
+                                    <p class="text-gray-600">Samedi : 9h - 13h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <h4 class="font-medium text-gray-800 mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                                    <i data-feather="facebook"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                                    <i data-feather="instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                                    <i data-feather="linkedin"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                                    <i data-feather="twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">DT</div>
+                        <h3 class="text-xl font-bold">DOMTECH</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">L'ingénierie du froid, de la climatisation et de l'énergie en Côte d'Ivoire.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Climatisation</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Réfrigération</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Électricité</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Plomberie</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Entreprise</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Tarifs</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Conseils</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Légal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">CGV</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 DOMTECH. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Conditions d'utilisation</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Politique de cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('button[aria-label="mobile menu"]');
+        const mobileMenu = document.querySelector('#mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

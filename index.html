@@ -65,6 +65,17 @@
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center justify-center space-y-8 text-xl font-medium text-gray-700 hidden">
+      <a href="#home" onclick="closeMobileMenu()">Accueil</a>
+      <a href="#services" onclick="closeMobileMenu()">Services</a>
+      <a href="#pricing" onclick="closeMobileMenu()">Tarifs</a>
+      <a href="#advice" onclick="closeMobileMenu()">Conseils</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+      <a href="merci.html" onclick="closeMobileMenu()">Merci</a>
+      <button onclick="closeMobileMenu()" class="mt-8 text-blue-600">Fermer</button>
+    </nav>
+
     <!-- Hero Section -->
     <section id="home" class="hero-gradient pt-32 pb-20">
         <div class="container mx-auto px-6">

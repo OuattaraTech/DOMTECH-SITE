@@ -721,12 +721,16 @@ document.addEventListener('DOMContentLoaded', function() {
         feather.replace();
         
         // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('button[aria-label="mobile menu"]');
-        const mobileMenu = document.querySelector('#mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
+        const menuBtn = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.getElementById('mobile-menu');
+        function closeMobileMenu() {
+          mobileMenu.classList.add('hidden');
+        }
+        if(menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', function() {
             mobileMenu.classList.toggle('hidden');
-        });
+          });
+        }
     </script>
 </body>
 </html>

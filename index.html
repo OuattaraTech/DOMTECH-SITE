@@ -476,8 +476,7 @@
                 <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
                     <form action="https://formsubmit.co/infodomtech225@gmail.com" method="POST" class="space-y-6">
                     <form action="https://formsubmit.co/infodomtech225@gmail.com" method="POST" class="space-y-6">
-                        <!-- FormSubmit options -->
-                        <input type="hidden" name="_next" value="merci.html">
+                        <!-- FormSubmit options (désactivées pour AJAX) -->
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         <!-- /FormSubmit options -->
@@ -512,6 +511,38 @@
                         <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg font-medium transition shadow-md"required>
                             Envoyer la demande
                         </button>
+                        <p id="form-message" class="text-green-600 font-semibold mt-2"></p>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form[action^="https://formsubmit.co"]');
+    const message = document.getElementById('form-message');
+    if(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            message.textContent = '';
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if(response.ok) {
+                    message.textContent = '✅ Message envoyé avec succès !';
+                    form.reset();
+                } else {
+                    message.textContent = '❌ Une erreur est survenue. Veuillez réessayer.';
+                }
+            })
+            .catch(() => {
+                message.textContent = '❌ Une erreur est survenue. Veuillez réessayer.';
+            });
+        });
+    }
+});
+</script>
                     </form>
                 </div>
                 

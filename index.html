@@ -511,15 +511,24 @@
                         <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg font-medium transition shadow-md"required>
                             Envoyer la demande
                         </button>
-                        <p id="form-message" class="text-green-600 font-semibold mt-2"></p>
+                                            <div id="form-message-container" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+                                                <div class="bg-white rounded-lg shadow-lg p-8 text-center max-w-xs">
+                                                    <p id="form-message" class="text-green-600 font-semibold mb-4"></p>
+                                                    <button id="form-message-ok" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded font-medium transition">OK</button>
+                                                </div>
+                                            </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form[action^="https://formsubmit.co"]');
+    const messageContainer = document.getElementById('form-message-container');
     const message = document.getElementById('form-message');
+    const okBtn = document.getElementById('form-message-ok');
     if(form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             message.textContent = '';
+            message.classList.remove('text-red-600');
+            message.classList.add('text-green-600');
             const formData = new FormData(form);
             fetch(form.action, {
                 method: 'POST',
@@ -529,16 +538,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
             .then(response => {
+                messageContainer.classList.remove('hidden');
                 if(response.ok) {
                     message.textContent = '✅ Message envoyé avec succès !';
                     form.reset();
                 } else {
                     message.textContent = '❌ Une erreur est survenue. Veuillez réessayer.';
+                    message.classList.remove('text-green-600');
+                    message.classList.add('text-red-600');
                 }
             })
             .catch(() => {
+                messageContainer.classList.remove('hidden');
                 message.textContent = '❌ Une erreur est survenue. Veuillez réessayer.';
+                message.classList.remove('text-green-600');
+                message.classList.add('text-red-600');
             });
+        });
+        okBtn.addEventListener('click', function() {
+            messageContainer.classList.add('hidden');
         });
     }
 });

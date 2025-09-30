@@ -5,156 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOMTECH - Ingénierie du froid, climatisation et énergie</title>
     <meta name="description" content="DOMTECH spécialiste en installation, entretien et dépannage de climatisation, froid industriel et solutions énergétiques en Côte d'Ivoire">
-    <meta name="keywords" content="DOMTECH, climatisation Côte d'Ivoire, installation clim, entretien climatiseur, froid industriel, énergie, groupe électrogène, plomberie">
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            background: #ffffff;
         }
         .hero-gradient {
             background: linear-gradient(135deg, #f0f9ff 0%, #e6f4ff 50%, #d0ebff 100%);
         }
-        .price-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        /* Responsive confirmation box */
-        #form-message-container .max-w-xs {
-            width: 90vw;
-            max-width: 360px;
-        }
-        @media (max-width: 640px) {
-            .container, .mx-auto {
-                padding-left: 0.5rem !important;
-                padding-right: 0.5rem !important;
-            }
-        }
-        
-        /* Ajoutez ces styles dans la balise style existante */
-    
-    /* Design responsive général */
-    @media (max-width: 768px) {
-        .container {
-            padding: 0 1rem;
-        }
-        
-        h1, h2 {
-            font-size: 1.75rem !important;
-        }
-        
-        .text-xl {
-            font-size: 1.1rem !important;
-        }
-    }
-
-    /* Menu mobile amélioré */
-    #mobile-menu {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(5px);
-        transition: all 0.3s ease;
-    }
-
-    /* Cartes de services responsives */
-    @media (max-width: 640px) {
-        .service-card {
-            margin: 1rem 0;
-            padding: 1.5rem;
-        }
-    }
-
-    /* Formulaire responsive */
-    @media (max-width: 640px) {
-        .form-container {
-            padding: 1rem;
-        }
-        
-        input, textarea, select {
-            font-size: 16px !important; /* Évite le zoom sur iOS */
-        }
-        
-        .form-grid {
-            gap: 1rem;
-        }
-    }
-
-    /* Images responsives */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Espacement responsive */
-    @media (max-width: 768px) {
-        .section-padding {
-            padding: 3rem 0;
-        }
-        
-        .space-y-6 > * {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-    }
-
-    /* Amélioration de la boîte de confirmation */
-    #form-message-container {
-        padding: 1rem;
-    }
-    
-    @media (max-width: 640px) {
-        #form-message-container .max-w-xs {
-            width: 90%;
-            margin: 0 auto;
-        }
-    }
-
-    /* Grille responsive pour les services */
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    /* Footer responsive */
-    @media (max-width: 640px) {
-        footer {
-            text-align: center;
-        }
-        
-        .footer-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-    }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="fixed w-full bg-white shadow-sm z-50">
+    <header class="fixed w-full bg-black/80 backdrop-blur-md shadow-lg z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">DT</div>
-                    <h1 class="ml-3 text-xl font-bold text-gray-800">DOMTECH</h1>
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-xl">DT</div>
+                    <h1 class="ml-3 text-xl font-bold text-white">DOMTECH</h1>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-blue-600 font-medium">Accueil</a>
-                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition">Services</a>
-                    <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition">Tarifs</a>
-                    <a href="#advice" class="text-gray-600 hover:text-blue-600 transition">Conseils</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                    <a href="#home" class="text-blue-400 font-medium hover:text-blue-300 transition">Accueil</a>
+                    <a href="#services" class="text-gray-300 hover:text-blue-300 transition">Services</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-blue-300 transition">Tarifs</a>
+                    <a href="#advice" class="text-gray-300 hover:text-blue-300 transition">Conseils</a>
+                    <a href="#contact" class="text-gray-300 hover:text-blue-300 transition">Contact</a>
                 </nav>
-                <button class="md:hidden focus:outline-none">
-                    <i data-feather="menu" class="text-gray-600"></i>
-                </button>
-                <a href="#contact" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition shadow-md">
+                <a href="#contact" class="hidden md:block btn-future">
                     Demander un devis
                 </a>
             </div>
@@ -480,7 +363,106 @@
                         </div>
                         <div>
                             <label for="email" class="block text-gray-700 mb-2">Votre email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"required>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"required>                            <head>
+                                <!-- Gardez vos meta tags existants -->
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>DOMTECH - Ingénierie du froid, climatisation et énergie</title>
+                                
+                                <!-- Ajoutez la nouvelle police -->
+                                <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+                                
+                                <!-- Gardez vos autres liens CSS -->
+                                <script src="https://cdn.tailwindcss.com"></script>
+                                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+                                
+                                <!-- Remplacez votre balise style existante par celle-ci -->
+                                <style>
+                                    :root {
+                                        --primary: #0066FF;
+                                        --gradient-1: linear-gradient(135deg, #0066FF 0%, #00FFCC 100%);
+                                        --glass: rgba(255, 255, 255, 0.1);
+                                    }
+                            
+                                    body {
+                                        font-family: 'Space Grotesk', sans-serif;
+                                        background: #ffffff; /* Fond blanc au lieu du noir */
+                                        color: #333333; /* Texte foncé au lieu du blanc */
+                                    }
+                            
+                                    /* Effet glassmorphism */
+                                    .glass-card {
+                                        background: rgba(255, 255, 255, 0.9);
+                                        backdrop-filter: blur(10px);
+                                        border: 1px solid rgba(0, 0, 0, 0.1);
+                                        border-radius: 20px;
+                                        box-shadow: 0 8px 32px 0 rgba(0, 102, 255, 0.1);
+                                        color: #333333;
+                                    }
+                            
+                                    /* Animation de hover */
+                                    .hover-effect {
+                                        transition: all 0.3s ease;
+                                    }
+                                    
+                                    .hover-effect:hover {
+                                        transform: translateY(-5px);
+                                        box-shadow: 0 10px 40px rgba(0, 102, 255, 0.2);
+                                    }
+                            
+                                    /* Boutons futuristes */
+                                    .btn-future {
+                                        background: var(--gradient-1);
+                                        border: none;
+                                        padding: 1rem 2rem;
+                                        border-radius: 50px;
+                                        color: white;
+                                        font-weight: 500;
+                                        transition: all 0.3s ease;
+                                        position: relative;
+                                        overflow: hidden;
+                                    }
+                            
+                                    .btn-future:hover {
+                                        transform: scale(1.05);
+                                        box-shadow: 0 0 30px rgba(0, 102, 255, 0.4);
+                                    }
+                            
+                                    /* Headers modernes */
+                                    .modern-header {
+                                        background: var(--gradient-1);
+                                        -webkit-background-clip: text;
+                                        -webkit-text-fill-color: transparent;
+                                        font-weight: 700;
+                                    }
+                            
+                                    .future-input {
+                                        background: rgba(255, 255, 255, 0.9);
+                                        border: 1px solid rgba(0, 0, 0, 0.1);
+                                        border-radius: 12px;
+                                        color: #333333;
+                                        padding: 1rem;
+                                        transition: all 0.3s ease;
+                                    }
+                            
+                                    .future-input:focus {
+                                        border-color: var(--primary);
+                                        box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+                                        outline: none;
+                                    }
+                            
+                                    .scroll-fade {
+                                        opacity: 0;
+                                        transform: translateY(20px);
+                                        transition: all 0.6s ease;
+                                    }
+                            
+                                    .scroll-fade.visible {
+                                        opacity: 1;
+                                        transform: translateY(0);
+                                    }
+                                </style>
+                            </head>
                         </div>
                         <div>
                             <label for="phone" class="block text-gray-700 mb-2">Votre téléphone</label>
@@ -579,8 +561,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div>
                                     <h4 class="font-medium text-gray-800 mb-1">Téléphone</h4>
-                                    <p class="text-gray-600">07 10 36 76 02</p>
-                                    <p class="text-gray-600">05 05 95 70 61</p>
+                                    <a href="tel:+2250710367602" class="text-blue-600 hover:text-blue-700 transition">07 10 36 76 02</a>
+                                    <br>
+                                    <a href="tel:+2250505957061" class="text-blue-600 hover:text-blue-700 transition">05 05 95 70 61</a>
                                 </div>
                             </div>
                             
@@ -590,7 +573,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div>
                                     <h4 class="font-medium text-gray-800 mb-1">Email</h4>
-                                    <p class="text-gray-600">infodomtech225@gmail.com</p>
+                                    <a href="mailto:infodomtech225@gmail.com" class="text-blue-600 hover:text-blue-700 transition">
+                                        infodomtech225@gmail.com
+                                    </a>
                                 </div>
                             </div>
                             
@@ -688,5 +673,18 @@ document.addEventListener('DOMContentLoaded', function() {
           });
         }
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.scroll-fade').forEach((el) => observer.observe(el));
+    });
+</script>
 </body>
 </html>

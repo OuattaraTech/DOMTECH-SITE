@@ -36,6 +36,103 @@
                 padding-right: 0.5rem !important;
             }
         }
+        
+        /* Ajoutez ces styles dans la balise style existante */
+    
+    /* Design responsive général */
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+        
+        h1, h2 {
+            font-size: 1.75rem !important;
+        }
+        
+        .text-xl {
+            font-size: 1.1rem !important;
+        }
+    }
+
+    /* Menu mobile amélioré */
+    #mobile-menu {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(5px);
+        transition: all 0.3s ease;
+    }
+
+    /* Cartes de services responsives */
+    @media (max-width: 640px) {
+        .service-card {
+            margin: 1rem 0;
+            padding: 1.5rem;
+        }
+    }
+
+    /* Formulaire responsive */
+    @media (max-width: 640px) {
+        .form-container {
+            padding: 1rem;
+        }
+        
+        input, textarea, select {
+            font-size: 16px !important; /* Évite le zoom sur iOS */
+        }
+        
+        .form-grid {
+            gap: 1rem;
+        }
+    }
+
+    /* Images responsives */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Espacement responsive */
+    @media (max-width: 768px) {
+        .section-padding {
+            padding: 3rem 0;
+        }
+        
+        .space-y-6 > * {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    /* Amélioration de la boîte de confirmation */
+    #form-message-container {
+        padding: 1rem;
+    }
+    
+    @media (max-width: 640px) {
+        #form-message-container .max-w-xs {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    /* Grille responsive pour les services */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    /* Footer responsive */
+    @media (max-width: 640px) {
+        footer {
+            text-align: center;
+        }
+        
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -53,7 +150,6 @@
                     <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition">Tarifs</a>
                     <a href="#advice" class="text-gray-600 hover:text-blue-600 transition">Conseils</a>
                     <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
-                    <a href="merci.html" class="text-gray-600 hover:text-blue-600 transition">Merci</a>
                 </nav>
                 <button class="md:hidden focus:outline-none">
                     <i data-feather="menu" class="text-gray-600"></i>
@@ -156,132 +252,8 @@
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Des solutions complètes pour tous vos besoins en climatisation, froid et énergie</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE CLIMATISATION -->
-                    <img src="img/climatisation slit.jpg" alt="Climatisation Split" class="w-full h-48 object-cover rounded-lg mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Climatisation Split</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Installation professionnelle</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Entretien et recharge gaz</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Désinstallation/réinstallation</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
-                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE ARMOIRES -->
-                    <img src="img/sm-devis-climatiseur-armoire.jpg" alt="Armoires climatisation" class="w-full h-48 object-cover rounded-lg mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Armoires de climatisation</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Installation pour entreprises</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Installation pour particuliers</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Forfaits installation + entretien</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
-                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE REFRIGERATION -->
-                    <img src="img/bien-choisir-un-congelateur.webp" alt="Congélateurs et réfrigérateurs" class="w-full h-48 object-cover rounded-lg mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Congélateurs et réfrigérateurs</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Dépannage rapide et efficace</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Entretien préventif</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Vérification et contrôle</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE ELECTRICITE -->
-                    <img src="img/électricité.jpg" alt="Électricité bâtiment" class="w-full h-48 object-cover rounded-lg mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Électricité bâtiment</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Installation électrique</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Groupes électrogènes</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Dépannage électrique</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
-                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE PLOMBERIE -->
-                    <img src="img/les-differents-travaux-de-plomberie.jpg" alt="Plomberie & gazinière" class="w-full h-48 object-cover rounded-lg mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Plomberie & gazinière</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Installation et réparation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Dépannage gazinière</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Maintenance préventive</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
-                    <!-- REMPLACER PAR VOTRE IMAGE SERVICE CONSEILS -->
-                    <img src="img/conseiller énergétique .jpg" alt="Conseils énergétiques" class="w-full h-48 object-cover rounded-lg mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Conseils énergétiques</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Optimisation consommation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Solutions contre l'humidité</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                            <span>Audit énergétique</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="services-grid">
+                <!-- Vos cartes de services -->
             </div>
         </div>
     </section>
@@ -634,23 +606,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                         </div>
                         
-                        <div class="mt-8 pt-8 border-t border-gray-200">
-                            <h4 class="font-medium text-gray-800 mb-4">Suivez-nous</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
-                                    <i data-feather="facebook"></i>
-                                </a>
-                                <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
-                                    <i data-feather="instagram"></i>
-                                </a>
-                                <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
-                                    <i data-feather="linkedin"></i>
-                                </a>
-                                <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
-                                    <i data-feather="twitter"></i>
-                                </a>
-                            </div>
-                        </div>
+                    
                     </div>
                 </div>
             </div>
